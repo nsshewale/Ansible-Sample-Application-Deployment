@@ -29,7 +29,10 @@ steps:
     args:
        - '-c'
        - | 
+         sudo adduser --system --disabled-password newuser
+         sudo usermod -aG sudo newuser
+         echo 'newuser:newuser' | sudo chpasswd
          ls -lha   
          sudo chmod 777 id_rsa
-         ansible-playbook main.yml -i inventories/dev/hosts --user devops --key-file id_rsa -e '@configs/dev.yml' -vvvv 
+         ansible-playbook main.yml -i inventories/dev/hosts --user newuser --key-file id_rsa -e '@configs/dev.yml' -vvvv 
     
