@@ -7,7 +7,7 @@
   tasks:
     - include_role:
       name: add_devops_user
-      tasks_from: /workspace/add_user.yml
+      tasks_from: '/workspace/add_user.yml'
         
 #- hosts: all
  # become: true
