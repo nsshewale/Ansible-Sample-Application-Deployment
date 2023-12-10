@@ -5,7 +5,7 @@
  
    - name: Add devops user to the sudoers
      copy:
-          dest: "/etc/sudoers.d/{{username}}"
+          dest: "/etc/sudoers.d/{{devops}}"
           content: "devops  ALL=(ALL)  NOPASSWD: ALL"
  
    - name: Deploy SSH Key
