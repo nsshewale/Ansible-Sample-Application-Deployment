@@ -30,5 +30,5 @@ steps:
        - '-c'
        - | 
          ls -lha    
-         ansible-playbook main.yml -i inventories/dev/hosts --user newuser --key-file id_rsa -e '@configs/dev.yml -vvvv' 
+         ansible-playbook main.yml -i inventories/dev/hosts --user newuser --key-file id_rsa -vvvv' 
     
