@@ -1,5 +1,4 @@
- 
-   - name: Add a new user named devops
+- name: Add a new user named devops
      user:
           name={{username}}
           password={{ devops_password }}
@@ -30,10 +29,10 @@
            state=present
            backup=yes
 
-    - name: Copy React app files
-      copy:
+   - name: Copy React app files
+     copy:
         src: '/workspace/build'
         dest: '/var/www/html'        
               
-      notify:
-        - restart ssh
+     notify:
+       - restart ssh
