@@ -41,6 +41,7 @@
      copy:
          src: '/workspace/build'
          dest: '/var/www/html' 
-        
+     notify:
+       - restart ssh     
       
 
