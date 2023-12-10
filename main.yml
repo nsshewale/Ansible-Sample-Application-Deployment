@@ -6,8 +6,8 @@
   gather_facts: false
   tasks:
     - include_role:
-     - name: add_devops_user
-       tasks_from: '/workspace/roles/add_devops_user/tasks/add_user.yml'
+        name: add_devops_user
+        tasks_from: '/workspace/roles/add_devops_user/tasks/add_user.yml'
         
 #- hosts: all
  # become: true
