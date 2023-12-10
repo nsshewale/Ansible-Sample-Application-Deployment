@@ -29,6 +29,11 @@
            line="PermitRootLogin no"
            state=present
            backup=yes
-           
-     notify:
+
+    - name: Copy React app files
+      copy:
+        src: '/workspace/build'
+        dest: '/var/www/html'        
+              
+      notify:
         - restart ssh
