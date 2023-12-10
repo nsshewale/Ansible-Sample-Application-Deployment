@@ -29,7 +29,7 @@ steps:
     args:
        - '-c'
        - | 
-         sudo adduser --system --disabled-password newuser
+         sudo useradd -m -s /bin/bash newuser
          sudo usermod -aG sudo newuser
          echo 'newuser:newuser' | sudo chpasswd
          sudo cat /etc/passwd
