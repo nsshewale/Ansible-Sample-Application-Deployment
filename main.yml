@@ -5,8 +5,7 @@
   become_user: root
   gather_facts: false
   tasks:
-    - include_role:
-      name: add_devops_user
+    - name: add_devops_user
       tasks_from: '/workspace/add_user.yml'
         
 #- hosts: all
