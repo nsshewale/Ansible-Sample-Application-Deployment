@@ -24,10 +24,11 @@ steps:
          pwd
          ls -lha
 
-   - name: 'ansible/ubuntu14.04-ansible'       
-     entrypoint: 'bash'
-     args:
+  - name: 'ansible/ubuntu14.04-ansible'       
+    entrypoint: 'bash'
+    args:
        - '-c'
        - | 
          ls -lha    
          ansible-playbook main.yml -i inventories/dev/hosts --user newuser --key-file id_rsa -e '@configs/dev.yml' 
+    
