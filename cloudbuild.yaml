@@ -13,3 +13,13 @@ steps:
   - name: 'node:14'
     entrypoint: 'npm'
     args: ['run', 'build']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bin/bash'
+    args:
+       - '-c'
+       - | 
+         ls -lha
+         cd build
+         pwd
+         ls -lha
