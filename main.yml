@@ -8,12 +8,12 @@
 
    - name: Add a new user named devops
      user:
-          name=devops
+          name=sample
           password={{ devops_password }}
  
    - name: Add devops user to the sudoers
      copy:
-          dest: "/etc/sudoers.d/devops"
+          dest: "/etc/sudoers.d/sample"
           content: "devops  ALL=(ALL)  NOPASSWD: ALL"
  
    - name: Deploy SSH Key
