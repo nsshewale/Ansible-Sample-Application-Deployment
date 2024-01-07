@@ -38,5 +38,5 @@ steps:
          ls -lha   
          sudo chmod 600 id_rsa
          sudo chmod 600 id_rsa.pub
-         ansible-playbook main.yml -i inventories/dev/hosts --user devops --key-file id_rsa -e '@configs/dev.yml' -vvvvv
+         ansible-playbook main.yml -i inventories/dev/hosts --user sample --key-file id_rsa -e '@configs/dev.yml' -vvvvv
     
